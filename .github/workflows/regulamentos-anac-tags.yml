@@ -19,5 +19,5 @@ jobs:
         pip install requests
     - name: Run script
       run: |
-        python regulamentos-anac-tags.py
+        python /regulamentos-anac-tags.py
         
