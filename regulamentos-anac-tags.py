@@ -70,7 +70,7 @@ df['tags'] = df['tags'].str.replace("|", ", ", regex=False).str.split(', ').toli
 df['tags'] = df['tags'].apply(sorted)
 
 # JSON - indicar local onde o arquivo será salvo
-path = '/ANAC/regulamentos-anac-tags.json'
+path = './regulamentos-anac-tags.json'
 # salvar arquivo em formato .json
 with open(path, 'w') as f:
   df.to_json(f, orient="records")
