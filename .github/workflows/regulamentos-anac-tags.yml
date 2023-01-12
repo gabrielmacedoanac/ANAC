@@ -21,10 +21,9 @@ jobs:
       run: |
         python ./regulamentos-anac-tags.py
     - name: Upload JSON file
-      uses: actions/upload-file@v2
+      uses: actions/upload-artifact@v3
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: regulamentos-anac-tags.json
         path: regulamentos-anac-tags.json
         file: regulamentos-anac-tags.json
-        
