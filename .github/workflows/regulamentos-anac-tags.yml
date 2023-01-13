@@ -26,7 +26,7 @@ jobs:
       with:
         name: regulamentos-anac-tags.json
         path: ./regulamentos-anac-tags.json   
-     - name: Commit and push if it changed
+    - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
