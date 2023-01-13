@@ -25,4 +25,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: regulamentos-anac-tags.json
-        path: ./
+        path: ./regulamentos-anac-tags.json
