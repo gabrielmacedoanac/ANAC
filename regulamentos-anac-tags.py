@@ -88,7 +88,7 @@ def main():
 #  with open(path, 'w') as f:
 #    df.to_json(f, orient="records")
 
-  df.to_json('./regulamentos-anac-tags.json', force_ascii=False, default_encoding='utf-8')
+  df.to_json('./regulamentos-anac-tags.json', force_ascii=False, orient="records")
   
 if __name__ == '__main__':
   main()
