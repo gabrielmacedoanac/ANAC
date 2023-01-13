@@ -69,12 +69,27 @@ def main():
   # Ordenar a lista de forma alfabética
   df['tags'] = df['tags'].apply(sorted)
   
-  # JSON - indicar local onde o arquivo será salvo
-  path = './regulamentos-anac-tags.json'
-  # salvar arquivo em formato .json
-  with open(path, 'w') as f:
-    df.to_json(f, orient="records")
+  # CSV - indicar local onde o arquivo será salvo
+  path = './regulamentos-anac-tags.csv'
 
+  # salvar arquivo em formato .csv com codificação utf-8
+  with open(path, 'w', encoding = 'utf-8-sig') as f:
+    df.to_csv(f, index=False)
+  
+  # TSV - indicar local onde o arquivo será salvo 
+  path = './regulamentos-anac-tags.tsv'
+  # salvar arquivo em formato .csv com codificação utf-8
+  with open(path, 'w', encoding = 'utf-8-sig') as f:
+    df.to_csv(f, sep="\t", index=False)
+  
+  # JSON - indicar local onde o arquivo será salvo
+#  path = './regulamentos-anac-tags.json'
+  # salvar arquivo em formato .json
+#  with open(path, 'w') as f:
+#    df.to_json(f, orient="records")
+
+  df.to_json('./regulamentos-anac-tags.json', force_ascii=False, default_encoding='utf-8')
+  
 if __name__ == '__main__':
   main()
 
